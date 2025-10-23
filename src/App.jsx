@@ -1,72 +1,61 @@
-import { useState } from 'react';
-import './App.css';
+// import Navbar from "./components/Navbar";
+// import Home from "./pages/Home";
+// import Footer from "./components/Footer";
 
-// Import your components here
-// import Button from './components/Button';
-// import Navbar from './components/Navbar';
-// import Footer from './components/Footer';
-// import TaskManager from './components/TaskManager';
+// function App() {
+//   return (
+//     <div className="min-h-screen flex flex-col">
+//       <Navbar />
+//       <main className="flex-grow">
+//         <Home />
+//       </main>
+//       <Footer />
+//     </div>
+//   );
+// }
 
-function App() {
-  const [count, setCount] = useState(0);
+// export default App;
 
+// import Card from "./components/Card";
+
+// function App() {
+//   return (
+//     <div className="p-6 space-y-4">
+//       <Card title="Example Card">
+//         <p>This is a sample card using Tailwind CSS.</p>
+//       </Card>
+
+//       <Card title="Another Card" className="bg-blue-50 dark:bg-blue-900">
+//         <p>Cards can be reused and styled independently.</p>
+//       </Card>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Tasks from "./pages/Tasks";
+import About from "./pages/About";
+import Footer from "./components/Footer";
+import Posts from './pages/Posts';
+import Layout from "./components/Layout";
+import TaskManager from './components/TaskManager';
+
+
+
+const App = () => {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      {/* Navbar component will go here */}
-      <header className="bg-white dark:bg-gray-800 shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold">PLP Task Manager</h1>
-        </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6">
-          <div className="flex flex-col items-center justify-center">
-            <p className="text-lg mb-4">
-              Edit <code className="font-mono bg-gray-200 dark:bg-gray-700 p-1 rounded">src/App.jsx</code> and save to test HMR
-            </p>
-            
-            <div className="flex items-center gap-4 my-4">
-              <button
-                onClick={() => setCount((count) => count - 1)}
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
-              >
-                -
-              </button>
-              <span className="text-xl font-bold">{count}</span>
-              <button
-                onClick={() => setCount((count) => count + 1)}
-                className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
-              >
-                +
-              </button>
-            </div>
-
-            <p className="text-gray-500 dark:text-gray-400 mt-4">
-              Implement your TaskManager component here
-            </p>
-          </div>
-        </div>
-        
-        {/* API data display will go here */}
-        <div className="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6">
-          <h2 className="text-2xl font-bold mb-4">API Data</h2>
-          <p className="text-gray-500 dark:text-gray-400">
-            Fetch and display data from an API here
-          </p>
-        </div>
-      </main>
-
-      {/* Footer component will go here */}
-      <footer className="bg-white dark:bg-gray-800 shadow mt-auto">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} PLP Task Manager. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout><Home /></Layout>} />
+      <Route path="/tasks" element={<Layout><TaskManager /></Layout>} />
+      <Route path="/about" element={<Layout><About /></Layout>} />
+      <Route path="/posts" element={<Layout><Posts /></Layout>} />
+    </Routes>
   );
-}
+};
 
-export default App; 
+export default App;
+
