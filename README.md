@@ -4,7 +4,7 @@ A modern React application built with Vite, featuring task management functional
 
 ![Application Screenshot](screenshots/app-screenshot.png)
 
-[Live Demo](https://your-app-url-here.com) <!-- Replace with your deployment URL -->
+[Live Demo](https://react-js-jsx-and-css-mastering-fron-tau.vercel.app/) <!-- Replace with your deployment URL -->
 
 ## Features
 
@@ -82,43 +82,6 @@ src/
    vercel
    ```
 
-### Option 2: Netlify
-
-1. Create an account on [Netlify](https://netlify.com)
-2. Build your project:
-   ```bash
-   npm run build
-   ```
-3. Drag and drop the `dist` folder to Netlify's sites page
-   or
-   Connect your GitHub repository through Netlify's UI
-
-### Option 3: GitHub Pages
-
-1. Add homepage to package.json:
-   ```json
-   {
-     "homepage": "https://username.github.io/repo-name"
-   }
-   ```
-2. Install gh-pages:
-   ```bash
-   npm install --save-dev gh-pages
-   ```
-3. Add deploy scripts to package.json:
-   ```json
-   {
-     "scripts": {
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d dist"
-     }
-   }
-   ```
-4. Deploy:
-   ```bash
-   npm run deploy
-   ```
-
 ## Recommended Deployment: Vercel
 
 For this project, I recommend using **Vercel** because:
@@ -130,24 +93,9 @@ For this project, I recommend using **Vercel** because:
 
 ## Screenshots
 
-![Home Page](screenshots/home.png)
+
 ![Tasks Page](screenshots/tasks.png)
 ![Posts Page](screenshots/posts.png)
+![About Page](screenshots/about.png)
 
-## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- React Team for the excellent documentation
-- Vite Team for the build tool
-- Tailwind CSS Team for the styling framework
